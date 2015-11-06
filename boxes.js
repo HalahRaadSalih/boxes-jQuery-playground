@@ -2,6 +2,7 @@ $(document).ready( function  () {
 	console.log("ready for DOM!");
 	findMeThatSecretBox();
 	findChildDivsOfFirstRow();
+	hideLastBoxInTheLastRow();
 });
 
 
@@ -19,4 +20,9 @@ function findChildDivsOfFirstRow(){
 	var childDivs = $('#row1 div');
 	childDivs.addClass('boxType3');
 	console.log(childDivs);
+}
+
+function hideLastBoxInTheLastRow(){
+
+	var lastBox = $('#row4 div:last').hide();
 }
