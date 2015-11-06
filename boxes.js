@@ -5,6 +5,7 @@ $(document).ready( function  () {
 	// hideLastBoxInTheLastRow();
 	changeAllRedBoxesToWhite();
 	findFirstTwoDivsInTheSecondRow();
+	findTheNotSecretBox();
 });
 
 
@@ -42,4 +43,10 @@ function findFirstTwoDivsInTheSecondRow(){
 		console.log('divs as an array' + firstTwoDivs);
 
 
+}
+
+function findTheNotSecretBox(){
+	var boxes = $('div').not('#secretBox', '.row');
+	console.log(boxes);
+	boxes.css('width','2px');
 }
