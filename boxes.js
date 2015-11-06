@@ -2,7 +2,8 @@ $(document).ready( function  () {
 	console.log("ready for DOM!");
 	findMeThatSecretBox();
 	findChildDivsOfFirstRow();
-	hideLastBoxInTheLastRow();
+	// hideLastBoxInTheLastRow();
+	changeAllRedBoxesToWhite();
 });
 
 
@@ -25,4 +26,10 @@ function findChildDivsOfFirstRow(){
 function hideLastBoxInTheLastRow(){
 
 	var lastBox = $('#row4 div:last').hide();
+}
+
+function changeAllRedBoxesToWhite(){
+	var redBoxes = $('.box.boxType1.red');
+	console.log(redBoxes);
+	redBoxes.css('background','white');
 }
