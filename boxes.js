@@ -4,6 +4,7 @@ $(document).ready( function  () {
 	findChildDivsOfFirstRow();
 	// hideLastBoxInTheLastRow();
 	changeAllRedBoxesToWhite();
+	findFirstTwoDivsInTheSecondRow();
 });
 
 
@@ -32,4 +33,13 @@ function changeAllRedBoxesToWhite(){
 	var redBoxes = $('.box.boxType1.red');
 	console.log(redBoxes);
 	redBoxes.css('background','white');
+}
+
+function findFirstTwoDivsInTheSecondRow(){
+	var firstTwoDivs = $('#row2 div').filter(':nth-child(1), :nth-child(2)').removeClass('box boxType2 boxType3');
+
+	// var firstTwoDivs = $('#row2 div').splice(0,2).removeClass('boxType2 boxType3');
+		console.log('divs as an array' + firstTwoDivs);
+
+
 }
